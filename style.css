@@ -28,15 +28,6 @@
     list-style: none;
 }
 
-/* .page-navigation__item {
-    transform: translateX(0);
-    transition: transform .2s;
-}
-
-.page-navigation__item:hover {
-    transform: translateX(5%);
-} */
-
 .page-navigation__item a {
     font-family: 'OpenSans', sans-serif;
     font-weight: bold;
@@ -46,23 +37,6 @@
     text-decoration: none;
     color: rgb(236, 0, 140);
     line-height: 40px;
-}
-
-/* FOOTER */
-.page-footer {
-    position: fixed;
-    bottom: 50px;
-    left: 50px;
-}
-
-.social-links {
-    list-style: none;
-}
-
-.social-links__link i {
-    color: rgb(236, 0, 140);
-    font-size: 30px;
-    margin-top: 15px;
 }
 
 /* CONTENT */
@@ -95,10 +69,10 @@
 
 /* HOME */
 .band-members {
-    width: 60vw;
+    width: 65vw;
     display: flex;
     flex-direction: row;
-    flex-shrink: 1;
+    /* flex-shrink: 1; */
     justify-content: right;
     position: absolute;
     top: 50%;
@@ -144,10 +118,10 @@
     background-color: rgb(37, 12, 49);
     position: absolute;
     top: 50%;
-    left: 18%;
     right: 52%;
+    width: 400px;
     border-bottom: 3px solid rgb(236, 0, 140);
-    padding: 40px;
+    padding: 30px;
 }
 
 .about-section__desc-header {
@@ -205,7 +179,7 @@
     justify-self: left;
     font-family: 'OpenSans', sans-serif;
     font-size: 12px;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     line-height: 20px;
     color: rgb(204, 200, 225);
     justify-self: left;
@@ -239,7 +213,7 @@
 /* PHOTOS */
 .gallery {
     list-style: none;
-    margin-left: 24vw;
+    margin-left: 18vw;
     display: grid;
     grid: repeat(3, 1fr) / repeat(3, 1fr);
     grid-gap: 20px
@@ -265,7 +239,7 @@
 
 /* CONTACT */
 .contact-section__info {
-    margin-left: 24vw;
+    margin-left: 18vw;
     display: grid;
     grid: repeat(2, 1fr) / repeat(2, 1fr);
 }
@@ -277,7 +251,7 @@
 .contact__adress {
     text-align: left;
     align-self: center;
-    margin-left: 40px;
+    margin-left: 50px;
     font-family: 'OpenSans', sans-serif;
     font-size: 13px;
     letter-spacing: 1.5px;
@@ -315,5 +289,23 @@
 
 .form__button {
     margin-top: 20px;
-    width: 50%;
+    width: 140px;
+}
+
+
+/* FOOTER */
+.page-footer {
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+}
+
+.social-links {
+    list-style: none;
+}
+
+.social-links__link i {
+    color: rgb(236, 0, 140);
+    font-size: 30px;
+    margin-top: 15px;
 }
