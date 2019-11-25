@@ -1,0 +1,319 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.screen-reader-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* HEADER */
+.page-header {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
+
+.page-brand {
+    margin-bottom: 20px;
+}
+
+.page-navigation__items {
+    list-style: none;
+}
+
+/* .page-navigation__item {
+    transform: translateX(0);
+    transition: transform .2s;
+}
+
+.page-navigation__item:hover {
+    transform: translateX(5%);
+} */
+
+.page-navigation__item a {
+    font-family: 'OpenSans', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 6.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(236, 0, 140);
+    line-height: 40px;
+}
+
+/* FOOTER */
+.page-footer {
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+}
+
+.social-links {
+    list-style: none;
+}
+
+.social-links__link i {
+    color: rgb(236, 0, 140);
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+/* CONTENT */
+.page-content {
+    width: 100%;
+    padding: 0 180px 0 220px;
+    background-image: url(./images/background.svg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-section {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    text-align: right;
+}
+
+.content-section__header {
+    font-family: 'OpenSans', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    letter-spacing: 4.5px;
+    text-transform: uppercase;
+    color: rgb(236, 0, 140);
+    padding: 80px 0 40px;
+}
+
+
+/* HOME */
+.band-members {
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    justify-content: right;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    list-style: none;
+}
+
+.band-members__item {
+    height: 100%;
+    margin: 0 2vw;
+    text-align: left;
+}
+
+.band-members__name {
+    font-family: 'OpenSans', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(204, 200, 255, 1);
+    margin: 40px 0 20px;
+}
+
+.band-members__image {
+    width: 100%;
+}
+
+.band-members__desc {
+    font-family: 'OpenSans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: rgba(204, 200, 255, 0.7);
+}
+
+/* ABOUT */
+.about__image {
+    width: 58%;
+    border-top: 3px solid rgb(236, 0, 140);
+}
+
+.about-section__desc {
+    background-color: rgb(37, 12, 49);
+    position: absolute;
+    top: 50%;
+    left: 18%;
+    right: 52%;
+    border-bottom: 3px solid rgb(236, 0, 140);
+    padding: 40px;
+}
+
+.about-section__desc-header {
+    font-family: 'OpenSans', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 3.8px;
+    text-transform: uppercase;
+    color: rgb(204, 200, 225);
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.about-section__desc-details {
+    font-family: 'OpenSans', sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    line-height: 22px;
+    color: rgb(204, 200, 225);
+    text-align: left;
+}
+
+/* CONCERTS */
+.concerts {
+    margin-left: 30vw;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    grid-gap: 40px;
+}
+
+.concerts__image {
+    width: 100%;
+    object-fit: cover;
+    border-bottom: 3px solid rgb(236, 0, 140);
+    margin-bottom: 8px;
+}
+
+.concerts__info {
+    display: grid;
+    grid-template: repeat(2, 50%) / repeat(2, 50%);
+}
+
+.concerts__date {
+    font-family: 'OpenSans', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    line-height: 30px;
+    color: rgb(204, 200, 225);
+    justify-self: left;
+}
+
+.concerts__location {
+    grid-row: 2/3;
+    justify-self: left;
+    font-family: 'OpenSans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    line-height: 20px;
+    color: rgb(204, 200, 225);
+    justify-self: left;
+}
+
+.button {
+    background-color: rgba(204, 200, 225, 0.1);
+    border: none;
+    font-family: 'OpenSans', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    color: rgb(204, 200, 225);
+    text-transform: uppercase;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.concerts__button {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    justify-self: right;
+    align-self: center;
+}
+
+/* VIDEO */
+.video__link {
+    border-top: 3px solid rgb(236, 0, 140);
+}
+
+/* PHOTOS */
+.gallery {
+    list-style: none;
+    margin-left: 24vw;
+    display: grid;
+    grid: repeat(3, 1fr) / repeat(3, 1fr);
+    grid-gap: 20px
+}
+
+.gallery__item {
+    border-top: 3px solid rgb(236, 0, 140);
+    overflow: hidden;
+}
+
+.gallery__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform .4s;
+}
+
+.gallery__image:hover {
+    transform: scale(1.05);
+}
+
+/* CONTACT */
+.contact-section__info {
+    margin-left: 24vw;
+    display: grid;
+    grid: repeat(2, 1fr) / repeat(2, 1fr);
+}
+
+.contact__image {
+    width: 100%;
+}
+
+.contact__adress {
+    text-align: left;
+    align-self: center;
+    margin-left: 40px;
+    font-family: 'OpenSans', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    line-height: 20px;
+    color: rgb(204, 200, 225);
+    font-style: normal;
+}
+
+.form {
+    text-align: left;
+    width: 60%;
+    margin-top: 20px;
+}
+
+.form__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form__label {
+    font-family: 'OpenSans', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+    color: rgb(204, 200, 225);
+}
+
+.form__input {
+    height: 36px;
+    border: none;
+    background-color: rgba(204, 200, 225, 0.1);
+    border-radius: 6px;
+}
+
+.form__button {
+    margin-top: 20px;
+    width: 50%;
+}
