@@ -183,7 +183,7 @@ body {
 }
 
 .button {
-    background-color: rgba(204, 200, 225, 0.1);
+    background-color: rgba(204, 200, 225, 0.15);
     border: none;
     font-size: 13px;
     letter-spacing: 1px;
@@ -207,19 +207,6 @@ body {
 }
 
 /* PHOTOS */
-
-/* .gallery {
-    list-style: none;
-    margin-left: 18vw;
-    display: grid;
-    grid: repeat(3, 1fr) / repeat(3, 1fr);
-    grid-gap: 20px
-} 
-
-.gallery__item {
-    border-top: 3px solid var(--main-color);
-    overflow: hidden;
-}*/
 
 .gallery {
     list-style: none;
@@ -312,7 +299,7 @@ body {
 .form__input {
     height: 36px;
     border: none;
-    background-color: rgba(204, 200, 225, 0.1);
+    background-color: rgba(204, 200, 225, 0.15);
     border-radius: 6px;
 }
 
@@ -349,7 +336,6 @@ body {
         height: 100px;
         width: 100%;
         padding: 40px;
-        /* background-color: rgb(24, 4, 33); */
         z-index: 2;
     }
 
@@ -512,7 +498,7 @@ body {
     }
 
     .about-section__desc-details {
-        font-size: 10px;
+        font-size: 12px;
         letter-spacing: 1px;
         line-height: 18px;
         color: rgb(204, 200, 225);
@@ -542,6 +528,10 @@ body {
 
     .concerts__date {
         line-height: 20px;
+    }
+
+    .button {
+        font-size: 12px;
     }
 
     /* VIDEO */
@@ -606,7 +596,6 @@ body {
     }
 
     .form__button {
-        /* padding: 0; */
         margin: 0;
         margin: 10px 0 0 0;
     }
@@ -618,7 +607,6 @@ body {
     /* FOOTER */
     .page-footer {
         position: absolute;
-        /* background-color: yellow; */
         bottom: 40px;
         left: 40px;
         right: 40px;
