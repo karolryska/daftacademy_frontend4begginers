@@ -1,7 +1,16 @@
+:root {
+    --item-margin-bottom: 20px;
+    --main-color: rgb(236, 0, 140);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: 'OpenSans', sans-serif;
 }
 
 .screen-reader-only {
@@ -28,14 +37,13 @@
     list-style: none;
 }
 
-.page-navigation__item a {
-    font-family: 'OpenSans', sans-serif;
+.page-navigation__name {
     font-weight: bold;
     font-size: 13px;
     letter-spacing: 6.5px;
     text-transform: uppercase;
     text-decoration: none;
-    color: rgb(236, 0, 140);
+    color: var(--main-color);
     line-height: 40px;
 }
 
@@ -57,12 +65,11 @@
 }
 
 .content-section__header {
-    font-family: 'OpenSans', sans-serif;
     font-weight: bold;
     font-size: 28px;
     letter-spacing: 4.5px;
     text-transform: uppercase;
-    color: rgb(236, 0, 140);
+    color: var(--main-color);
     padding: 80px 0 40px;
 }
 
@@ -88,7 +95,6 @@
 }
 
 .band-members__name {
-    font-family: 'OpenSans', sans-serif;
     font-weight: bold;
     font-size: 15px;
     letter-spacing: 3px;
@@ -97,12 +103,7 @@
     margin: 40px 0 20px;
 }
 
-.band-members__image {
-    width: 100%;
-}
-
 .band-members__desc {
-    font-family: 'OpenSans', sans-serif;
     font-size: 12px;
     letter-spacing: 2px;
     color: rgba(204, 200, 255, 0.7);
@@ -111,7 +112,7 @@
 /* ABOUT */
 .about__image {
     width: 58%;
-    border-top: 3px solid rgb(236, 0, 140);
+    border-top: 3px solid var(--main-color);
 }
 
 .about-section__desc {
@@ -120,12 +121,11 @@
     top: 50%;
     right: 52%;
     width: 400px;
-    border-bottom: 3px solid rgb(236, 0, 140);
+    border-bottom: 3px solid var(--main-color);
     padding: 30px;
 }
 
 .about-section__desc-header {
-    font-family: 'OpenSans', sans-serif;
     font-weight: bold;
     font-size: 15px;
     letter-spacing: 3.8px;
@@ -136,7 +136,6 @@
 }
 
 .about-section__desc-details {
-    font-family: 'OpenSans', sans-serif;
     font-size: 13px;
     letter-spacing: 2px;
     line-height: 22px;
@@ -155,7 +154,7 @@
 .concerts__image {
     width: 100%;
     object-fit: cover;
-    border-bottom: 3px solid rgb(236, 0, 140);
+    border-bottom: 3px solid var(--main-color);
     margin-bottom: 8px;
 }
 
@@ -165,10 +164,9 @@
 }
 
 .concerts__date {
-    font-family: 'OpenSans', sans-serif;
     font-size: 12px;
     font-weight: bold;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     line-height: 30px;
     color: rgb(204, 200, 225);
     justify-self: left;
@@ -177,9 +175,8 @@
 .concerts__location {
     grid-row: 2/3;
     justify-self: left;
-    font-family: 'OpenSans', sans-serif;
     font-size: 12px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     line-height: 20px;
     color: rgb(204, 200, 225);
     justify-self: left;
@@ -188,9 +185,8 @@
 .button {
     background-color: rgba(204, 200, 225, 0.1);
     border: none;
-    font-family: 'OpenSans', sans-serif;
     font-size: 13px;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     color: rgb(204, 200, 225);
     text-transform: uppercase;
     padding: 12px;
@@ -207,21 +203,56 @@
 
 /* VIDEO */
 .video__link {
-    border-top: 3px solid rgb(236, 0, 140);
+    border-top: 3px solid var(--main-color);
 }
 
 /* PHOTOS */
-.gallery {
+
+/* .gallery {
     list-style: none;
     margin-left: 18vw;
     display: grid;
     grid: repeat(3, 1fr) / repeat(3, 1fr);
     grid-gap: 20px
+} 
+
+.gallery__item {
+    border-top: 3px solid var(--main-color);
+    overflow: hidden;
+}*/
+
+.gallery {
+    list-style: none;
+    margin-left: 18vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
 }
 
 .gallery__item {
-    border-top: 3px solid rgb(236, 0, 140);
+    width: 32%;
+    margin-bottom: 20px;
+    border-top: 3px solid var(--main-color);
     overflow: hidden;
+}
+
+@supports (display: grid) {
+    .gallery {
+        list-style: none;
+        margin-left: 18vw;
+        display: grid;
+        grid: repeat(3, 1fr) / repeat(3, 1fr);
+        grid-gap: 20px
+    }
+
+    .gallery__item {
+        width: auto;
+        margin-bottom: 0;
+        border-top: 3px solid var(--main-color);
+        overflow: hidden;
+
+    }
 }
 
 .gallery__image {
@@ -252,7 +283,6 @@
     text-align: left;
     align-self: center;
     margin-left: 50px;
-    font-family: 'OpenSans', sans-serif;
     font-size: 13px;
     letter-spacing: 1.5px;
     line-height: 20px;
@@ -273,7 +303,6 @@
 }
 
 .form__label {
-    font-family: 'OpenSans', sans-serif;
     font-size: 13px;
     letter-spacing: 1.5px;
     line-height: 30px;
@@ -292,7 +321,6 @@
     width: 140px;
 }
 
-
 /* FOOTER */
 .page-footer {
     position: fixed;
@@ -304,8 +332,303 @@
     list-style: none;
 }
 
-.social-links__link i {
-    color: rgb(236, 0, 140);
+.social-links__icon {
+    color: var(--main-color);
     font-size: 30px;
     margin-top: 15px;
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+
+    /* HEADER */
+    .page-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100px;
+        width: 100%;
+        padding: 40px;
+        /* background-color: rgb(24, 4, 33); */
+        z-index: 2;
+    }
+
+    .page-brand {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 90px;
+        width: 100%;
+        background-color: rgb(24, 4, 33);
+        z-index: 1;
+    }
+
+    .page-brand__logo {
+        margin: 40px;
+        height: 28px;
+    }
+
+    .hamburger {
+        position: fixed;
+        top: 42px;
+        right: 40px;
+        height: 22px;
+        width: 30px;
+        z-index: 1;
+    }
+
+    .hamburger__inner {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        height: 2px;
+        width: 100%;
+        background-color: red;
+    }
+
+    .hamburger__inner,
+    .hamburger__inner::before,
+    .hamburger__inner::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        height: 2px;
+        width: 100%;
+        background-color: var(--main-color);
+    }
+
+    .hamburger__inner::before {
+        content: "";
+        top: -10px;
+        transform: none;
+    }
+
+    .hamburger__inner::after {
+        content: "";
+        top: 10px;
+        transform: none;
+    }
+
+    .page-navigation {
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 100px 0 0 40px;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(24, 4, 33);
+    }
+
+    .page-navigation__name {
+        line-height: 50px;
+    }
+
+    /* CONTENT */
+    .page-content {
+        padding: 100vh 40px 0 40px;
+        overflow: hidden;
+        background-image: none;
+        background-color: rgb(24, 4, 33);
+    }
+
+    .content-section {
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .content-section__header {
+        font-size: 16px;
+        letter-spacing: 3px;
+        padding: 0;
+        margin-bottom: 22px;
+    }
+
+    /* HOME */
+    .band-members {
+        position: static;
+        transform: none;
+        height: calc(100vh - 140px);
+        width: 100%;
+        display: grid;
+        grid-template: repeat(2, 50%) / repeat(2, 50%);
+        overflow: hidden;
+    }
+
+    .band-members__item {
+        height: auto;
+        width: 100%;
+        margin: 0;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .band-members__image {
+        height: 70%;
+        object-fit: contain;
+        margin-bottom: 10px;
+
+    }
+
+    .band-members__name,
+    .band-members__desc {
+        display: none;
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin: 0;
+    }
+
+    /* ABOUT  */
+    .about__image {
+        width: 100%;
+        border-top: 2px solid var(--main-color);
+        margin-bottom: var(--item-margin-bottom);
+    }
+
+    .about-section__desc {
+        position: static;
+        width: 100%;
+        border-bottom: none;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .about-section__desc-header {
+        font-size: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: rgb(204, 200, 225);
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .about-section__desc-details {
+        font-size: 10px;
+        letter-spacing: 1px;
+        line-height: 18px;
+        color: rgb(204, 200, 225);
+        text-align: left;
+    }
+
+    /* CONCERTS */
+    .concerts {
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .concerts__item {
+        margin-bottom: var(--item-margin-bottom);
+    }
+
+    .concerts__item:nth-last-child(1) {
+        margin-bottom: 0;
+    }
+
+    .concerts__image {
+        border-bottom: 2px solid var(--main-color);
+        margin-bottom: 2px;
+    }
+
+    .concerts__date {
+        line-height: 20px;
+    }
+
+    /* VIDEO */
+    .video__link {
+        border-top: 2px solid var(--main-color);
+        height: auto;
+        width: 100%;
+        object-fit: scale-down;
+    }
+
+    /* PHOTOS */
+    .gallery {
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gallery__item {
+        border-top: 2px solid var(--main-color);
+        margin-bottom: var(--item-margin-bottom);
+    }
+
+    .gallery__item:nth-last-child(1) {
+        margin-bottom: 0;
+    }
+
+    /* CONTACT */
+    .contact-section__info {
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact__image {
+        margin-bottom: var(--item-margin-bottom);
+    }
+
+    .contact__adress {
+        margin-left: 0;
+        align-self: flex-start;
+        font-size: 12px;
+        letter-spacing: 1px;
+        margin-bottom: var(--item-margin-bottom);
+    }
+
+    .form {
+        text-align: left;
+        width: 100%;
+        margin: 0;
+    }
+
+    .form__field {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .form__label {
+        font-size: 12px;
+        letter-spacing: 1px;
+        line-height: 30px;
+    }
+
+    .form__button {
+        /* padding: 0; */
+        margin: 0;
+        margin: 10px 0 0 0;
+    }
+
+    .form__field:last-child {
+        margin: 0;
+    }
+
+    /* FOOTER */
+    .page-footer {
+        position: absolute;
+        /* background-color: yellow; */
+        bottom: 40px;
+        left: 40px;
+        right: 40px;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .social-links__icon {
+        font-size: 24px;
+    }
 }
