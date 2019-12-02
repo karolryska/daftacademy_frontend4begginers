@@ -37,6 +37,14 @@ body {
     list-style: none;
 }
 
+.page-navigation__item {
+    transition: transform .2s;
+}
+
+.page-navigation__item:hover {
+    transform: translateX(5%);
+}
+
 .page-navigation__name {
     font-weight: bold;
     font-size: 13px;
@@ -46,6 +54,8 @@ body {
     color: var(--main-color);
     line-height: 40px;
 }
+
+
 
 /* CONTENT */
 .page-content {
@@ -192,6 +202,11 @@ body {
     padding: 12px;
     border-radius: 6px;
     cursor: pointer;
+    transition: background-color .2s;
+}
+
+.button:hover {
+    background-color: rgba(204, 200, 225, 0.25);
 }
 
 .concerts__button {
