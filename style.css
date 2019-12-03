@@ -565,6 +565,7 @@ body {
     }
 
     .gallery__item {
+        width: 100%;
         border-top: 2px solid var(--main-color);
         margin-bottom: var(--item-margin-bottom);
     }
