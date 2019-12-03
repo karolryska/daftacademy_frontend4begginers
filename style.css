@@ -100,7 +100,7 @@ body {
 
 .band-members__item {
     height: 100%;
-    margin: 0 2vw;
+    margin: 0 2vw 0 0;
     text-align: left;
 }
 
