@@ -538,7 +538,7 @@ body {
 
     .concerts__image {
         border-bottom: 2px solid var(--main-color);
-        margin-bottom: 2px;
+        margin-bottom: 4px;
     }
 
     .concerts__date {
