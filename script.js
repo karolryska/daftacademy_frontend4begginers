@@ -6,18 +6,17 @@ const footer = document.querySelector('.page-footer');
 const form = document.querySelector('.form');
 
 
-hamburger.addEventListener('click', () => {
+const menuAction = () => {
     hamburger.classList.toggle('hamburger--active');
     nav.classList.toggle('page-navigation--active');
     footer.classList.toggle('page-footer--active');
-});
+};
 
+
+hamburger.addEventListener('click', menuAction);
 
 for (let i = 0; i < navItems.length; i++) {
-    navItems[i].addEventListener('click', () => {
-        hamburger.classList.toggle('hamburger--active');
-        nav.classList.toggle('page-navigation--active');
-    });
+    navItems[i].addEventListener('click', menuAction);
 };
 
 
