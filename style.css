@@ -34,6 +34,7 @@ body {
 }
 
 .page-navigation__items {
+    width: 50%;
     list-style: none;
 }
 
@@ -209,11 +210,13 @@ body {
     background-color: rgba(204, 200, 225, 0.25);
 }
 
+
 .concerts__button {
     grid-column: 2/3;
     grid-row: 1/3;
     justify-self: right;
     align-self: center;
+    width: 60%;
 }
 
 /* VIDEO */
@@ -316,6 +319,7 @@ body {
     border: none;
     background-color: rgba(204, 200, 225, 0.15);
     border-radius: 6px;
+    color: rgb(204, 200, 225);
 }
 
 .form__button {
@@ -357,7 +361,7 @@ body {
         position: fixed;
         top: 0;
         left: 0;
-        height: 90px;
+        height: 100px;
         width: 100%;
         background-color: rgb(24, 4, 33);
         z-index: 1;
@@ -377,17 +381,6 @@ body {
         z-index: 1;
     }
 
-    .hamburger__inner {
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        height: 2px;
-        width: 100%;
-        background-color: red;
-    }
-
     .hamburger__inner,
     .hamburger__inner::before,
     .hamburger__inner::after {
@@ -399,6 +392,11 @@ body {
         height: 2px;
         width: 100%;
         background-color: var(--main-color);
+        transition: background-color .2s, transform .4s .2s;
+    }
+
+    .hamburger--active .hamburger__inner {
+        background-color: transparent;
     }
 
     .hamburger__inner::before {
@@ -413,15 +411,33 @@ body {
         transform: none;
     }
 
+    .hamburger--active .hamburger__inner {
+        background-color: transparent;
+    }
+
+    .hamburger--active .hamburger__inner::before {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .hamburger--active .hamburger__inner::after {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
     .page-navigation {
         opacity: 1;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
-        padding: 100px 0 0 30px;
+        transform: translateX(100%);
+        margin: 100px 30px 0 30px;
         height: 100%;
         width: 100%;
         background-color: rgb(24, 4, 33);
+        transition: transform .6s;
+    }
+
+    .page-navigation--active {
+        transform: translateX(0);
     }
 
     .page-navigation__name {
@@ -430,7 +446,7 @@ body {
 
     /* CONTENT */
     .page-content {
-        padding: 100vh 30px 0 30px;
+        padding: 100px 30px 0 30px;
         overflow: hidden;
         background-image: none;
         background-color: rgb(24, 4, 33);
@@ -621,10 +637,18 @@ body {
 
     /* FOOTER */
     .page-footer {
-        position: absolute;
-        bottom: 40px;
-        left: 40px;
-        right: 40px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 40px 40px 40px;
+        z-index: 2;
+        transform: translateX(100%);
+        transition: transform .6s;
+    }
+
+    .page-footer--active {
+        transform: translateX(0);
     }
 
     .social-links {
