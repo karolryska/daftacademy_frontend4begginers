@@ -15,6 +15,7 @@ const menuAction = () => {
 
 hamburger.addEventListener('click', menuAction);
 
+
 for (let i = 0; i < navItems.length; i++) {
     navItems[i].addEventListener('click', menuAction);
 };
@@ -24,9 +25,10 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
+    const formValues = Object.fromEntries(formData);
     const inputs = [...document.querySelectorAll('.form__input')];
 
-    console.log(Object.fromEntries(formData));
+    console.log(`e-mail: ${formValues.email}, topic: ${formValues.topic}`);
 
     inputs.forEach(input => {
         input.value = '';
@@ -35,9 +37,10 @@ form.addEventListener('submit', (e) => {
 
 
 concertButtons.forEach(concertButton => {
+    const haveFun = document.createElement('span');
+    haveFun.innerText = 'have fun!';
+    haveFun.classList.add('concerts__bought');
     concertButton.addEventListener('click', () => {
-        concertButton.textContent = 'have fun!';
-        concertButton.style.backgroundColor = 'transparent';
-        concertButton.style.pointerEvents = 'none';
+        concertButton.replaceWith(haveFun);
     })
 });
