@@ -28,7 +28,8 @@ form.addEventListener('submit', (e) => {
     const formValues = Object.fromEntries(formData);
     const inputs = [...document.querySelectorAll('.form__input')];
 
-    console.log(`e-mail: ${formValues.email}, topic: ${formValues.topic}`);
+    console.log(`E-mail: ${formValues.email}`);
+    console.log(`Topic: ${formValues.topic}`);
 
     inputs.forEach(input => {
         input.value = '';
