@@ -211,12 +211,23 @@ body {
 }
 
 
-.concerts__button {
+.concerts__button,
+.concerts__bought {
     grid-column: 2/3;
     grid-row: 1/3;
     justify-self: right;
     align-self: center;
     width: 60%;
+}
+
+.concerts__bought {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: rgb(204, 200, 225);
+    text-transform: uppercase;
+    padding: 12px;
+    text-align: center;
 }
 
 /* VIDEO */
