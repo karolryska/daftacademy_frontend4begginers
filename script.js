@@ -4,6 +4,7 @@ const nav = document.querySelector('.page-navigation');
 const navItems = [...document.querySelectorAll('.page-navigation__item')];
 const footer = document.querySelector('.page-footer');
 const form = document.querySelector('.form');
+const gallery = document.querySelector('.gallery');
 
 
 const menuAction = () => {
@@ -45,3 +46,23 @@ concertButtons.forEach(concertButton => {
         concertButton.replaceWith(haveFun);
     })
 });
+
+
+gallery.addEventListener('mouseover', (e) => {
+    if (e.target.classList.contains('gallery__image')) {
+        const image = e.target;
+        image.classList.toggle('gallery__image--mouseover');
+    }
+})
+
+gallery.addEventListener('mouseout', (e) => {
+    if (e.target.classList.contains('gallery__image')) {
+        console.log(e.target.style.transform);
+        const image = e.target;
+        image.classList.toggle('gallery__image--mouseout');
+        window.setTimeout(() => {
+            image.classList.toggle('gallery__image--mouseover');
+            image.classList.toggle('gallery__image--mouseout');
+        }, 800)
+    }
+})
