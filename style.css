@@ -280,8 +280,33 @@ body {
     transition: transform .4s;
 }
 
-.gallery__image:hover {
-    transform: scale(1.05);
+.gallery__image--mouseover {
+    transform: scale(1.2);
+}
+
+.gallery__image--mouseout {
+    animation: mouseout .8s both;
+}
+
+@keyframes mouseout {
+    0% {
+        transform: scale(1.2);
+    }
+
+    40% {
+        transform: scale(1.25);
+        filter: grayscale(80%);
+    }
+
+    80% {
+        transform: scale(1);
+        filter: grayscale(80%);
+    }
+
+    100% {
+        transform: scale(1);
+        filter: grayscale(0);
+    }
 }
 
 /* CONTACT */
